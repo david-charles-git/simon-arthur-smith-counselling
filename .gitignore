@@ -20,3 +20,4 @@ details.yml
 
 # Config
 .prettierrc.yml
+.DS_Store

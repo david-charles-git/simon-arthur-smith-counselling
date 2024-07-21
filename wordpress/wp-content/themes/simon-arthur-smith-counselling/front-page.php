@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <?php wp_head(); ?>
-  </head>
+<?php get_header(); ?>
 
-  <body>
-    <header>
-    </header>
+<main>
+  <h1>Front Page</h1>
+</main>
 
-    <main>
-      <h1>Font page</h1>
-    </main>
-
-    <footer>
-      <?php wp_footer(); ?>
-    </footer>
-  </body>
-</html>
+<?php get_footer(); ?>
