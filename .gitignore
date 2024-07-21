@@ -1,0 +1,22 @@
+/mysql
+/wordpress/*
+
+!/wordpress/.htaccess
+!/wordpress/wp-config.php
+!/wordpress/wp-content
+
+/wordpress/wp-content/upgrade
+/wordpress/wp-content/uploads
+/wordpress/wp-content/themes/*
+/wordpress/wp-content/plugins/*
+!/wordpress/wp-content/plugins/*.zip
+!/wordpress/wp-content/themes/simon-arthur-smith-counselling
+
+# Private 
+/invoices
+davids-work-hours.yml
+details.yml
+*.pem
+
+# Config
+.prettierrc.yml
