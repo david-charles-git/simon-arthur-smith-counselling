@@ -1,0 +1,16 @@
+{
+  "name": "simon-arthur-smith-counselling",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "David Charles",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "tailwindcss": "^3.4.7"
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i ./assests/css/tailwind.css -o ./style.css --watch",
+    "clean": "rm -rf node_modules yarn.lock"
+  }
+}
