@@ -18,6 +18,7 @@
 davids-work-hours.yml
 details.yml
 *.pem
+.env
 
 # Config
 .prettierrc.yml
