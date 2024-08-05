@@ -14,15 +14,15 @@
   if (function_exists('register_field_group')) {
     register_field_group(
       array(
-        'id'     => 'acf_options',
+        'id'     => 'acf_site_options',
         'title'  => 'Site Options',
         'fields' => array(
           array(
-            'key' => 'instructions',
+            'key' => 'site_options_instructions',
             'label' => 'Instructions',
-            'name' => 'instructions',
+            'name' => 'site_options_instructions',
             'type' => 'message',
-            'message' => 'Please fill out the fields below with the required information. Make sure to double-check your entries before saving.',
+            'message' => 'Site Option Instructions',
           ),
         ),
         'location' => array(

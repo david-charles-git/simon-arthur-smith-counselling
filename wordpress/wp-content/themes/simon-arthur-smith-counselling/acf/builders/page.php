@@ -2,10 +2,16 @@
   if (!defined('ABSPATH')) exit; 
 
   if (function_exists("register_field_group")) {
+    include_once get_template_directory() . '/acf/modules/spacer.php';
+    include_once get_template_directory() . '/acf/modules/content.php';
     include_once get_template_directory() . '/acf/modules/hero-banner.php';
+    include_once get_template_directory() . '/acf/modules/contact-form.php';
     
     $layouts = array(
-      $hero_banners
+      $spacer,
+      $content,
+      $hero_banners,
+      $contact_form,
     );
 
     register_field_group(
@@ -14,11 +20,11 @@
         'title' => 'Page Builder',
         'fields' => array(
           array(
-            'key' => 'instructions',
+            'key' => 'pageBuilder_instructions',
             'label' => 'Instructions',
-            'name' => 'instructions',
+            'name' => 'pageBuilder_instructions',
             'type' => 'message',
-            'message' => 'Please fill out the fields below with the required information. Make sure to double-check your entries before saving.',
+            'message' => 'Page Builder Instructions',
           ),
           array(
             'key' => 'pageBuilder',

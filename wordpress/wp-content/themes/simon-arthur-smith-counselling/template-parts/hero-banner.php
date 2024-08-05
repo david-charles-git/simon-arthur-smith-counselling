@@ -20,7 +20,7 @@
 
   <?php } elseif ($hero_banner_type === 'video' && $background_video)  { ?>
     <div class="background z-10" >
-      <video class='background min-h-full h-auto w-auto' style='max-width: unset;' autoplay loop muted playsinline>
+      <video class='background min-h-full' style='max-width: unset; width: auto; height: auto;' autoplay loop muted playsinline>
         <source src="<?php echo $background_video; ?>" type="video/mp4">
       </video>
     </div>
@@ -31,18 +31,18 @@
     <div class="background overlay z-20 bg-black" style="opacity: <?php echo $overlay_opacity; ?>"></div>
   <?php } ?>
 
-  <div class='inner background text-center z-30 h-auto'>
+  <div class='background text-center z-30 h-auto flex-col flex justify-center max-w-screen-lg'>
     <?php if ($title) { ?>
-      <h1 class='text-white text-4xl mb-4'><?php echo $title; ?></h1>
+      <h1 class='text-white mb-4'><?php echo $title; ?></h1>
     <?php } ?>
 
     <?php if ($copy) { ?>
-      <p class='text-white text-2xl mb-4'><?php echo $copy; ?></p>
+      <p class='text-white text-2xl mb-8'><?php echo $copy; ?></p>
     <?php } ?>
 
     <?php if ($has_call_to_action) { ?>
       <a
-        class="button"
+        class="button white"
         href="<?php echo $call_to_action_link; ?>"
         <?php echo $call_to_action_open_in_new_tab ? 'target="_blank"' : ''; ?>
       >

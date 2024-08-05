@@ -18,10 +18,8 @@
   function sas_register_scripts () {
     global $theme_uri;
     $version = wp_get_theme()->get('Version');
-    $tailwind_uri = 'https://cdn.tailwindcss.com';
 
     wp_enqueue_script('sas-main', $theme_uri  . '/assets/js/main.js', array(), $version, true);
-    wp_enqueue_script('sas-tailwind', $tailwind_uri, array(), $version, false);
   }
   add_action('wp_enqueue_scripts', 'sas_register_scripts');
 
@@ -56,5 +54,21 @@
   }
   add_action('admin_head', 'sas_remove_content_editor');
 
+  function sas_ses_phpmailer_init( $phpmailer ) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host       = 'email-smtp.us-east-1.amazonaws.com'; // Change to your SES region
+    $phpmailer->SMTPAuth   = true;
+    $phpmailer->Port       = 587; // Can be 25, 465, or 587
+    $phpmailer->Username   = 'YOUR_AWS_SES_SMTP_USERNAME';
+    $phpmailer->Password   = 'YOUR_AWS_SES_SMTP_PASSWORD';
+    $phpmailer->SMTPSecure = 'tls'; // Can be 'ssl' for Port 465
+
+    // Optional settings
+    $phpmailer->From       = 'your_verified_email@example.com';
+    $phpmailer->FromName   = 'Your Name';
+  }
+  add_action( 'phpmailer_init', 'custom_phpmailer_init' );
+
   include_once get_template_directory() . '/acf/main.php';
+  include_once get_template_directory() . '/template-functions/main.php';
 ?>

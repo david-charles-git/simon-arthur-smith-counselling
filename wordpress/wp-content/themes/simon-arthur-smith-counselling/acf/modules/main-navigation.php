@@ -2,7 +2,7 @@
   if (!defined('ABSPATH')) exit;
 
   $main_navigation = array (
-    'key' => 'field_MainNavigation_group_1',
+    'key' => 'field_MainNavigation_group',
     'label' => 'Main Navigation Group',
     'name' => 'MainNavigation_Group',
     'type' => 'group',
@@ -52,7 +52,6 @@
             'name' => 'has_sub_navigation',
             'type' => 'true_false',
             'column_width' => '20%',
-            'message' => '',
             'default_value' => 0
           ),
           //sub navigation

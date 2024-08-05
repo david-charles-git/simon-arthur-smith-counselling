@@ -38,7 +38,6 @@
         'name' => 'has_overlay',
         'type' => 'true_false',
         'column_width' => '60%',
-        'message' => '',
         'default_value' => 1
       ),
       //overlay_opacity
@@ -87,7 +86,6 @@
         'name' => 'has_call_to_action',
         'type' => 'true_false',
         'column_width' => '100%',
-        'message' => '',
         'default_value' => 0
       ),
       //call_to_action_copy
@@ -144,7 +142,6 @@
           ),
         )
       ),
-
       /* Image */
       //image
       array(
@@ -166,7 +163,6 @@
           ),
         )
       ),
-
       /* Video */
       //video
       array(

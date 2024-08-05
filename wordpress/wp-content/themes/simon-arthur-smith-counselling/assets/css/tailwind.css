@@ -1,3 +1,231 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  /* Elements */
+  * { 
+    @apply p-0 my-0 mx-auto;
+    max-width: 1920px;
+    box-sizing: border-box;
+  }
+	body {
+    @apply bg-white;
+		animation: fadeIn 1s;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+	}
+	main {
+    @apply pt-12;
+	}
+	h1 {
+	  @apply text-4xl font-bold;
+	}
+  h2 {
+    @apply text-3xl font-bold;
+  }
+  h3 {
+    @apply text-2xl font-bold;
+  }
+  h4 {
+    @apply text-xl font-bold;
+  }
+  h5 {
+    @apply text-lg font-bold;
+  }
+  h6 {
+    @apply text-base font-bold;
+  }
+  p a {
+    @apply underline underline-offset-1 duration-200 ease-in-out;
+  }
+  p a:hover {
+    @apply text-blue-500;
+  }
+  a {
+    @apply cursor-pointer;
+  }
+  pre {
+    @apply text-pretty;
+    font: inherit;
+  }
+  input, textarea {
+    @apply bg-white border-2 rounded-md px-2 py-1 duration-200 ease-in-out;
+    outline: none;
+  }
+
+  /* Fonts */
+    .poppins-thin {
+      font-family: "Poppins", sans-serif;
+      font-weight: 100;
+      font-style: normal;
+    }
+  
+    .poppins-extralight {
+      font-family: "Poppins", sans-serif;
+      font-weight: 200;
+      font-style: normal;
+    }
+  
+    .poppins-light {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+  
+    .poppins-regular {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  
+    .poppins-medium {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+  
+    .poppins-semibold {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+  
+    .poppins-bold {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+  
+    .poppins-extrabold {
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+      font-style: normal;
+    }
+  
+    .poppins-black {
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+    }
+  
+    .poppins-thin-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 100;
+      font-style: italic;
+    }
+  
+    .poppins-extralight-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 200;
+      font-style: italic;
+    }
+  
+    .poppins-light-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-style: italic;
+    }
+  
+    .poppins-regular-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: italic;
+    }
+  
+    .poppins-medium-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: italic;
+    }
+  
+    .poppins-semibold-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: italic;
+    }
+  
+    .poppins-bold-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: italic;
+    }
+  
+    .poppins-extrabold-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+      font-style: italic;
+    }
+  
+    .poppins-black-italic {
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-style: italic;
+    }
+
+
+  /* Components */
+	.background {
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		translate: -50% -50%;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.button {
+    @apply py-2 px-8 rounded-full inline-block duration-200 ease-in-out border-2 border-black;
+	}
+  .button.false {
+    @apply cursor-default;
+  }
+  .button.black {
+    @apply bg-black text-white;
+  }
+  .button.black:hover {
+    @apply bg-white text-black;
+  }
+  .button.black.false:hover {
+    @apply bg-black text-white;
+  }
+  .button.white {
+    @apply bg-white text-black; 
+  }
+  .button.white:hover {
+    @apply bg-black text-white;
+  }
+  .button.white.false:hover {
+    @apply bg-white text-black;
+  }
+
+  .hero-banner {}
+
+  .spacer {}
+	.spacer-container.small {
+    @apply h-6;
+	}
+	.spacer-container.medium {
+    @apply h-12;
+	}
+	.spacer-container.large {
+    @apply h-24;
+	}
+
+  .content-container {}
+
+  /* Animations */
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+}

@@ -8,8 +8,14 @@
 			the_row();
 
 			if (get_row_layout() == 'hero_banner') {
-					get_template_part('template-parts/hero-banner');
-			}
+				get_template_part('template-parts/hero-banner');
+			} else if (get_row_layout() == 'spacer') {
+        get_template_part('template-parts/spacer');
+      } else if (get_row_layout() == 'content') {
+        get_template_part('template-parts/content');
+      } else if (get_row_layout() == 'contact_form') {
+        get_template_part('template-parts/contact-form');
+      }
     }
 	}
 ?>
