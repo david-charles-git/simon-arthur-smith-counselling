@@ -9,6 +9,8 @@
       <h2 class='mb-4'><?php echo $title; ?></h2>
 
       <form id='contact-form' class='flex flex-col gap-4 max-w-screen-sm relative' onsubmit='handleContactFormSubmit(event)'>
+        <input type="hidden" id="recaptcha-response" name="recaptcha-response">
+
         <div class='flex gap-4 text-left m-0 justify-center'>
           <div class='m-0 text-left w-full'>
             <label class='block' for='firstName'>First Name</label>

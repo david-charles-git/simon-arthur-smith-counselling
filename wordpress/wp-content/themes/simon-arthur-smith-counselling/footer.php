@@ -9,6 +9,6 @@
   ?>
 </footer>
 <?php include_once get_template_directory() . '/template-parts/cookie-banner.php'; ?>
-<div class='opacity-0 hidden flex flex-wrap'></div>
+<div class='opacity-0 hidden flex flex-wrap border-blue-200 border-green-200 border-slate-200 border-red-200 opacity-100 opacity-0'></div>
 </body>
 </html>

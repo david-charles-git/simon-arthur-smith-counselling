@@ -155,7 +155,6 @@ const handleInputFocus = (event) => {
 const handleInputBlur = (event) => {
   const input = event.currentTarget || event.target;
   const value = input.value;
-  const form = input.closest('form');
   const inputType = input.getAttribute('type');
   const errorMessage = input.nextElementSibling;
   const hasError = getInputHasError(value, inputType);
@@ -206,7 +205,9 @@ const getInputHasError = (value, inputType) => {
 //props: { event: Event }
 const handleContactFormSubmit = (event) => {
   event.preventDefault();
-
+  grecaptcha.execute();
+  document.getElementById('recaptcha-response').value = e;
+  
   const form = event.currentTarget || event.target;
   const loadingScreen = form.getElementsByClassName('loading')[0];
   const successScreen = form.getElementsByClassName('success')[0];
@@ -292,7 +293,12 @@ const handleErrorClose = (event) => {
   }, 200);
 }
 
+
 // Event Listeners
+grecaptcha.ready(() => {
+    grecaptcha.execute();
+});
+
 window.addEventListener('DOMContentLoaded', () => {
 	cookieBannerShow();
 });
